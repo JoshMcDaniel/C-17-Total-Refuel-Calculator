@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="keywords" content="C-17, Fuel, Calculator"/>
+        <meta name="author" content="Josh McDaniel"/>
+        <meta name="description" content="This program is used to calculate the total fuel required in each tank of the C-17 after inputting a total required amount"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+        <title>C-17 Fuel Total Calculator</title>
+    </head>
+    <body>
+        
+<!--   ######### Outter Grid  ###########     -->
+        
+        <div class="gridWrapper">
+            
+        <div class="title">
+            <h1>C-17 Fuel Tank Quantity Calculator</h1>
+            <h2>Total fuel load converter</h2>
+        </div>
+            
+        <form id="form" autocomplete="off">
+            
+<!--   #########  Inner Grid ##########     -->
+            
+            <div class="gridWrapper2">
+            
+            <div class="inputArea">
+                <p>
+                    <label for="requiredTotalFuel">
+                        Input the total fuel load required without commas (,)
+                    </label>
+                    <br>
+                    <br>
+                    <input type="text" name="RequiredTotalFuel" id="requiredTotalFuel" size="6" maxlength="6" placeholder="Total fuel" autofocus required/>
+                    lbs
+                </p>
+                
+                <!--Activates js calculation-->
+                <input id="submitButton" type="submit" value="Calculate">
+            </div>
+        
+            <div id="tank1Box">
+                <h3>Fuel Tank</h3>
+                <h3>1</h3>
+                <p id="tank1">0</p>
+            </div>
+
+            <div id="tank2Box">
+                <h3>Fuel Tank</h3>
+                <h3>2</h3>
+                <p id="tank2">0</p>
+            </div>
+
+            <div id="tank3Box">
+                <h3>Fuel Tank</h3>
+                <h3>3</h3>
+                <p id="tank3">0</p>
+            </div>
+
+            <div id="tank4Box">
+                <h3>Fuel Tank</h3>
+                <h3>4</h3>
+                <p id="tank4">0</p>
+            </div>
+            
+            </div>
+        </form>
+        
+        </div>
+        
+    <script type="text/javascript" src="fuelCalc.js"></script>
+    
+    </body>
+</html>

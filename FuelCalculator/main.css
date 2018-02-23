@@ -1,0 +1,198 @@
+/*########### Defaults ###############*/
+
+html {
+    background-color: #000d00;
+    font-family: arial, helvetica, serif, sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+
+p, label {
+    color: darkgoldenrod;
+}
+
+/*############# Grid Wrapper ###########*/
+
+.gridWrapper {
+	display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
+    grid-gap: 0;
+}
+.gridWrapper2 {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0;
+}
+
+/*################ Content ###################*/
+
+/*------- Outter Grid --------*/
+.title {
+    grid-column: 1 / 2;
+	grid-row: 1 / 2;
+    text-align: center;
+    margin: 4rem 0 1rem 0;
+}
+
+#form {
+    grid-column: 1 / 2;
+	grid-row: 2 / 3;
+}
+
+/*------- Inner Grid --------*/
+
+/*Textbox and Calculate button*/
+.inputArea {
+    grid-column: 1 / 5;
+	grid-row: 1 / 2;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*Input box for required fuel load*/
+#requiredTotalFuel {
+    width: 40%;
+    height: auto;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 24px;
+    text-align: center;
+}
+
+#submitButton {
+    background-color: darkgray;
+    width: 20%;
+    height: 20%;
+    border-radius: 7px;
+    font-size: 20px;
+    color: white;
+}
+
+/*Each tank section*/
+#tank1Box, #tank2Box, #tank3Box, #tank4Box {
+    background-color: gray;
+    border-radius: 7px;
+    margin: 2rem 1rem;
+    text-align: center;
+}
+
+/*Displayed tank quantities*/
+#tank1, #tank2, #tank3, #tank4 {
+    background-color: #000d00;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: right;
+    font-size: 24px;
+}
+
+#tank1Box {
+    grid-column: 1 / 2;
+	grid-row: 2 / 3;
+}
+
+#tank2Box {
+    grid-column: 2 / 3;
+	grid-row: 2 / 3;
+}
+
+#tank3Box {
+    grid-column: 3 / 4;
+	grid-row: 2 / 3;
+}
+
+#tank4Box {
+    grid-column: 4 / 5;
+	grid-row: 2 / 3;
+}
+
+/*############ Media Queries ###############*/
+
+@media all and (max-width : 768px) {
+
+    .gridWrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-gap: 0;
+    }
+    .gridWrapper2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-gap: 0;
+    }
+    
+    /*------- Outter Grid -------*/
+    .title {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        margin: 2rem 0 1rem 0;
+    }
+
+    #form {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    /*------- Inner Grid -------*/
+
+    /*Textbox and Calculate button*/
+    .inputArea {
+        grid-column: 1 / 5;
+        grid-row: 1 / 2;
+        margin: 1rem 0;
+    }
+
+    /*Input box for required fuel load*/
+    #requiredTotalFuel {
+        width: 50%;
+    }
+
+    #submitButton {
+        width: auto;
+        height: auto;
+        margin: 0 0 2rem 0;
+        padding: 1rem;
+    }
+
+    /*Each tank section*/
+    #tank1Box, #tank2Box, #tank3Box, #tank4Box {
+        margin: 2px;
+    }
+
+    /*Displayed tank quantities*/
+    #tank1, #tank2, #tank3, #tank4 {
+        border-radius: 7px;
+        margin: 4px;
+        padding: 8px 8px;
+        font-size: 20px;
+    }
+
+    #tank1Box {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    #tank2Box {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    #tank3Box {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+
+    #tank4Box {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+    }  
+}
